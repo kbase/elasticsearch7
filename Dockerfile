@@ -4,7 +4,7 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG BRANCH=develop
 
-RUN bin/elasticsearch-plugin install --batch repository-s3 repository-gcs
+RUN bin/elasticsearch-plugin install --batch repository-s3 && bin/elasticsearch-plugin install --batch repository-gcs
 
 # 
 LABEL org.label-schema.build-date=$BUILD_DATE \
